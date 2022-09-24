@@ -3,7 +3,8 @@
 	--secondary-color: #757575;
 	--highlighted-color: #2196F3;
 	--white-color: #FFFFFF;
-	--header-footer-background-color: #2F303A;
+	--footer-background-color: #2F303A;
+	--header-background-color: #C4C4C4;
 	--secondary-bg-color: #F5F4FA;
 }
 
@@ -109,9 +110,10 @@ header {
 }
 
 .nav-links a {
-	display: block;
 	padding-top: 32px;
 	padding-bottom: 32px;
+	display: inline-flex;
+	align-items: center;
 }
 
 .nav-links .nav-link:not(:last-child) {
@@ -127,10 +129,25 @@ header {
 	color: var(--secondary-color);
 }
 
+.icon-nav {
+	margin-right: 10px;
+	fill: currentColor;
+}
+
+.icon-nav:hover,
+.icon-nav:focus {
+	fill: var(--highlighted-color);
+}
+
 .hero {
+	max-width: 1600px;
+	margin: 0 auto;
 	text-align: center;
-	background-color: var(--header-footer-background-color);
 	padding: 200px 0;
+	background-color: var(--header-background-color);
+	background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .hero h1 {
@@ -186,8 +203,18 @@ header {
 	margin-right: 30px;
 }
 
-/* .preferences>.container {
-	padding-top: 94px;
+.preferences-container {
+	height: 120px;
+	background-color: var(--secondary-bg-color);
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+/* .preferences-container svg {
+	width: 65.32px;
 } */
 
 .works.section {
@@ -243,6 +270,10 @@ header {
 	padding: 30px 0;
 }
 
+.team-text {
+	margin-bottom: 16px;
+}
+
 .team .team-card {
 	width: 270px;
 	text-align: center;
@@ -257,8 +288,31 @@ header {
 	font-size: 16px;
 }
 
+.team-contacts {
+	display: inline-flex;
+	width: 206px;
+	padding: 0;
+	justify-content: center;
+}
+
+.social-icon {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	fill: var(--secondary-color);
+}
+
+.social-icon:hover,
+.social-icon:focus {
+	background-color: var(--highlighted-color);
+	fill: var(--white-color);
+}
+
 footer {
-	background-color: var(--header-footer-background-color);
+	background-color: var(--footer-background-color);
 	padding-top: 60px;
 	padding-bottom: 60px;
 }
