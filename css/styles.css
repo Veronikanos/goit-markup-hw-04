@@ -246,6 +246,7 @@ header {
 .footer-contacts a {
 	line-height: 1.71;
 	color: var(--secondary-color);
+	display: block;
 }
 
 .footer-contacts li:not(:last-child) {
